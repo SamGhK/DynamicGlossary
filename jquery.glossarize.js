@@ -119,8 +119,7 @@
 
 		getDescription: function(term){			
 
-			//var regex = new RegExp('(\,|\s*)'+this.clean(term)+'\\s*|\\,$', 'i');
-			var regex = new RegExp('(\,|\s*)' + this.clean(term) +'$', 'i');
+			var regex = new RegExp('(\,|\s*)'+this.clean(term)+'\\s*|\\,$', 'i');
 
 			/**
 			 * Matches
