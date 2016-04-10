@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Glossarize jQuery Plugin</title>
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/normalize/2.1.0/normalize.css">
+  <link rel="stylesheet" href="tooltip/tooltip.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Content */
+
+    .contentWithGlossary{
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    .contentWithoutGlossary{
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    /* Glossarized Content */
+
+    .glossarizer_replaced{
+      border-bottom: 1px #333 dotted;
+      cursor: help;
+      display: inline;
+    }
+  </style>
+</head>
+<body>
+<div class="content">
+  <div class="contentWithGlossary">
+    <h3>Content With Glossary</h3>
+    <p>AAA:
+    Acronym for "authentication, authorization, and accounting." Protocol for authenticating a user based on their verifiable identity, authorizing a user based on their user rights, and accounting for a user's consumption of network resources.</p>
+    <p>SAQ: Acronym for "Self-Assessment Questionnaire." Reporting tool used to document self-assessment results from an entity's PCI DSS assessment.</p>
+    <p>Secure Cryptographic Device: A set of hardware, software and firmware that implements cryptographic processes (including cryptographic algorithms and key generation) and is contained within a defined cryptographic boundary. Examples of secure cryptographic devices include host/hardware security modules (HSMs) and point-of-interaction devices (POIs) that have been validated to PCI PTS.</p>
+    <p>Security Policy: Set of laws, rules, and practices that regulate how an organization manages, protects, and distributes sensitive information.</p>
+    <p>Authentication: Process of verifying identity of an individual, device, or process. Authentication typically occurs through the use of one or more authentication factors such as:
+    <ul>
+      <li>Something you know, such as a password or passphrase</li>
+      <li>Something you have, such as a token device or smart card</li>
+      <li>Something you are, such as a biometric</li>
+    </ul></p>
+    <p>Card Verification Code:
+      Also known as Card Validation Code or Value, or Card Security Code. Refers to either: (1) magnetic-stripe data, or (2) printed security features.
+
+    <ol>
+      <li>Data element on a card's magnetic stripe that uses secure cryptographic processes to protect data integrity on the stripe, and reveals any alteration or counterfeiting. Referred to as CAV, CVC, CVV, or CSC depending on payment card brand. The following list provides the terms for each card brand:</li>
+      <ul>
+        <li><strong>CAV</strong> - Card Authentication Value (JCB payment cards)</li>
+        <li><strong>CVC</strong> - Card Validation Code (MasterCard payment cards)</li>
+        <li><strong>CVV</strong> - Card Verification Value (Visa and Discover payment cards)</li>
+        <li><strong>CSC</strong> - Card Security Code (American Express)</li>
+      </ul>
+      <li style="margin-top:15px;">For Discover, JCB, MasterCard, and Visa payment cards, the second type of card verification value or code is the rightmost three-digit value printed in the signature panel area on the back of the card. For American Express payment cards, the code is a four-digit unembossed number printed above the PAN on the face of the payment cards. The code is uniquely associated with each individual piece of plastic and ties the PAN to the plastic. The following list provides the terms for each card brand:</li>
+      <ul>
+        <li><strong>CID</strong> - Card Identification Number (American Express and Discover payment cards)</li>
+        <li><strong>CAV2</strong> - Card Authentication Value 2 (JCB payment cards)</li>
+        <li><strong>CVC2</strong> - Card Validation Code 2 (MasterCard payment cards)</li>
+        <li><strong>CVV2</strong> - Card Verification Value 2 (Visa payment cards)</li>
+      </ul>
+    </ol></p>
+    <p>Card Verification Value:
+      Also known as Card Validation Code or Value, or Card Security Code. Refers to either: (1) magnetic-stripe data, or (2) printed security features.
+
+    <ol>
+      <li>Data element on a card's magnetic stripe that uses secure cryptographic processes to protect data integrity on the stripe, and reveals any alteration or counterfeiting. Referred to as CAV, CVC, CVV, or CSC depending on payment card brand. The following list provides the terms for each card brand:</li>
+      <ul>
+        <li><strong>CAV</strong> - Card Authentication Value (JCB payment cards)</li>
+        <li><strong>CVC</strong> - Card Validation Code (MasterCard payment cards)</li>
+        <li><strong>CVV</strong> - Card Verification Value (Visa and Discover payment cards)</li>
+        <li><strong>CSC</strong> - Card Security Code (American Express)</li>
+      </ul>
+      <li style="margin-top:15px;">For Discover, JCB, MasterCard, and Visa payment cards, the second type of card verification value or code is the rightmost three-digit value printed in the signature panel area on the back of the card. For American Express payment cards, the code is a four-digit unembossed number printed above the PAN on the face of the payment cards. The code is uniquely associated with each individual piece of plastic and ties the PAN to the plastic. The following list provides the terms for each card brand:</li>
+      <ul>
+        <li><strong>CID</strong> - Card Identification Number (American Express and Discover payment cards)</li>
+        <li><strong>CAV2</strong> - Card Authentication Value 2 (JCB payment cards)</li>
+        <li><strong>CVC2</strong> - Card Validation Code 2 (MasterCard payment cards)</li>
+        <li><strong>CVV2</strong> - Card Verification Value 2 (Visa payment cards)</li>
+      </ul>
+    </ol></p>
+    <p>Security Protocols: Network communications protocols designed to secure the transmission of data. Examples of security protocols include, but are not limited to SSL/TLS, IPSEC, SSH, HTTPS, etc.</p>
+    <p>Strong Cryptography: Cryptography based on industry-tested and accepted algorithms, along with strong key lengths (minimum 112-bits of effective key strength) and proper key-management practices. Cryptography is a method to protect data and includes both encryption (which is reversible) and hashing (which is not reversible, or "one way"). At the time of publication, examples of industry-tested and accepted standards and algorithms for minimum encryption strength include AES (128 bits and higher), TDES (minimum triple-lengthkeys), RSA (2048 bits and higher), ECC (160 bits and higher), and ElGamal (2048 bits and higher). See NIST Special Publication 800-57 Part 1 (http://csrc.nist.gov/publications/) for more guidance on cryptographic key strengths and algorithms.</p>
+    <p>POS: Acronym for "point of sale." Hardware and/or software used to process payment card transactions at merchant locations.</p>
+    <p>MOTO: Acronym for "Mail-Order/Telephone-Order."</p>
+    <p>Network Administrator: Personnel responsible for managing the network within an entity.  Responsibilities typically include but are not limited to network security, installations, upgrades, maintenance and activity monitoring.<p>
+    <p>Network Components: Include, but are not limited to firewalls, switches, routers, wireless access points, network appliances, and other security appliances.<p>
+    <p>Network: Two or more computers connected together  via physical or wireless means.<p>
+    <p>Virtual Machine Monitor: The VMM is included with the hypervisor and is software that implements virtual machine hardware abstraction. It manages the system's processor, memory, and other resources to allocate what each guest operating system requires.<p>
+    <p>Virtual Machine: A self-contained operating environment that behaves like a separate computer. It is also known as the "Guest" and runs on top of a hypervisor.<p>
+    <p>Merchant: For the purposes of the PCI DSS, a merchant is defined as any entity that accepts payment cards bearing the logos of any of the five members of PCI SSC (American Express, Discover, JCB, MasterCard or Visa) as payment for goods and/or services. Note that a merchant that accepts payment cards as payment for goods and/or services can also be a service provider, if the services sold result in storing, processing, or transmitting cardholder data on behalf of other merchants or service providers. For example, an ISP is a merchant that accepts payment cards for monthly billing, but also is a service provider if it hosts merchants as customers.</p>
+    <p>Firewall Software: A software firewall product installed on a single computer.</p>
+    <p>Firewall: Hardware and/or software technology that protects network resources from unauthorized access. A firewall permits or denies computer traffic between networks with different security levels based upon a set of rules and other criteria.</p>
+  </div>
+ <br>
+  <div class="contentWithoutGlossary">
+    <h3>Content Without Glossary</h3>
+    <p>AAA:
+      Acronym for "authentication, authorization, and accounting." Protocol for authenticating a user based on their verifiable identity, authorizing a user based on their user rights, and accounting for a user's consumption of network resources.</p>
+    <p>SAQ: Acronym for "Self-Assessment Questionnaire." Reporting tool used to document self-assessment results from an entity's PCI DSS assessment.</p>
+    <p>Secure Cryptographic Device: A set of hardware, software and firmware that implements cryptographic processes (including cryptographic algorithms and key generation) and is contained within a defined cryptographic boundary. Examples of secure cryptographic devices include host/hardware security modules (HSMs) and point-of-interaction devices (POIs) that have been validated to PCI PTS.</p>
+    <p>Security Policy: Set of laws, rules, and practices that regulate how an organization manages, protects, and distributes sensitive information.</p>
+    <p>Security Protocols: Network communications protocols designed to secure the transmission of data. Examples of security protocols include, but are not limited to SSL/TLS, IPSEC, SSH, HTTPS, etc.</p>
+    <p>Strong Cryptography: Cryptography based on industry-tested and accepted algorithms, along with strong key lengths (minimum 112-bits of effective key strength) and proper key-management practices. Cryptography is a method to protect data and includes both encryption (which is reversible) and hashing (which is not reversible, or \"one way\"). At the time of publication, examples of industry-tested and accepted standards and algorithms for minimum encryption strength include AES (128 bits and higher), TDES (minimum triple-lengthkeys), RSA (2048 bits and higher), ECC (160 bits and higher), and ElGamal (2048 bits and higher). See NIST Special Publication 800-57 Part 1 (http://csrc.nist.gov/publications/) for more guidance on cryptographic key strengths and algorithms.</p>
+    <p>POS: Acronym for "point of sale." Hardware and/or software used to process payment card transactions at merchant locations.</p>
+    <p>MO/TO: Acronym for "Mail-Order/Telephone-Order."</p>
+    <p>Merchant: For the purposes of the PCI DSS, a merchant is defined as any entity that accepts payment cards bearing the logos of any of the five members of PCI SSC (American Express, Discover, JCB, MasterCard or Visa) as payment for goods and/or services. Note that a merchant that accepts payment cards as payment for goods and/or services can also be a service provider, if the services sold result in storing, processing, or transmitting cardholder data on behalf of other merchants or service providers. For example, an ISP is a merchant that accepts payment cards for monthly billing, but also is a service provider if it hosts merchants as customers.</p>
+  </div>
+  <br>
+  <div class="contentWithGlossary">
+    <h3>Content With Glossary</h3>
+    <p>AAA:
+      Acronym for "authentication, authorization, and accounting." Protocol for authenticating a user based on their verifiable identity, authorizing a user based on their user rights, and accounting for a user's consumption of network resources.</p>
+    <p>SAQ: Acronym for "Self-Assessment Questionnaire." Reporting tool used to document self-assessment results from an entity's PCI DSS assessment.</p>
+    <p>Secure Cryptographic Device: A set of hardware, software and firmware that implements cryptographic processes (including cryptographic algorithms and key generation) and is contained within a defined cryptographic boundary. Examples of secure cryptographic devices include host/hardware security modules (HSMs) and point-of-interaction devices (POIs) that have been validated to PCI PTS.</p>
+    <p>Security Policy: Set of laws, rules, and practices that regulate how an organization manages, protects, and distributes sensitive information.</p>
+    <p>Security Protocols: Network communications protocols designed to secure the transmission of data. Examples of security protocols include, but are not limited to SSL/TLS, IPSEC, SSH, HTTPS, etc.</p>
+    <p>Strong Cryptography: Cryptography based on industry-tested and accepted algorithms, along with strong key lengths (minimum 112-bits of effective key strength) and proper key-management practices. Cryptography is a method to protect data and includes both encryption (which is reversible) and hashing (which is not reversible, or "one way"). At the time of publication, examples of industry-tested and accepted standards and algorithms for minimum encryption strength include AES (128 bits and higher), TDES (minimum triple-lengthkeys), RSA (2048 bits and higher), ECC (160 bits and higher), and ElGamal (2048 bits and higher). See NIST Special Publication 800-57 Part 1 (http://csrc.nist.gov/publications/) for more guidance on cryptographic key strengths and algorithms.</p>
+    <p>POS: Acronym for "point of sale." Hardware and/or software used to process payment card transactions at merchant locations.</p>
+    <p>MO/TO: Acronym for "Mail-Order/Telephone-Order."</p>
+    <p>Network Administrator: Personnel responsible for managing the network within an entity.  Responsibilities typically include but are not limited to network security, installations, upgrades, maintenance and activity monitoring.<p>
+    <p>Network Components: Include, but are not limited to firewalls, switches, routers, wireless access points, network appliances, and other security appliances.<p>
+    <p>Network: Two or more computers connected together  via physical or wireless means.<p>
+    <p>Virtual Machine Monitor: The VMM is included with the hypervisor and is software that implements virtual machine hardware abstraction. It manages the system's processor, memory, and other resources to allocate what each guest operating system requires.<p>
+    <p>Virtual Machine: A self-contained operating environment that behaves like a separate computer. It is also known as the "Guest" and runs on top of a hypervisor.<p>
+    <p>Merchant: For the purposes of the PCI DSS, a merchant is defined as any entity that accepts payment cards bearing the logos of any of the five members of PCI SSC (American Express, Discover, JCB, MasterCard or Visa) as payment for goods and/or services. Note that a merchant that accepts payment cards as payment for goods and/or services can also be a service provider, if the services sold result in storing, processing, or transmitting cardholder data on behalf of other merchants or service providers. For example, an ISP is a merchant that accepts payment cards for monthly billing, but also is a service provider if it hosts merchants as customers.</p>
+  </div>
+  <br>
+  <div class="contentWithoutGlossary">
+    <h3>Content Without Glossary</h3>
+    <p>AAA:
+      Acronym for "authentication, authorization, and accounting." Protocol for authenticating a user based on their verifiable identity, authorizing a user based on their user rights, and accounting for a user's consumption of network resources.</p>
+    <p>SAQ: Acronym for "Self-Assessment Questionnaire." Reporting tool used to document self-assessment results from an entity's PCI DSS assessment.</p>
+    <p>Secure Cryptographic Device: A set of hardware, software and firmware that implements cryptographic processes (including cryptographic algorithms and key generation) and is contained within a defined cryptographic boundary. Examples of secure cryptographic devices include host/hardware security modules (HSMs) and point-of-interaction devices (POIs) that have been validated to PCI PTS.</p>
+    <p>Security Policy: Set of laws, rules, and practices that regulate how an organization manages, protects, and distributes sensitive information.</p>
+    <p>Security Protocols: Network communications protocols designed to secure the transmission of data. Examples of security protocols include, but are not limited to SSL/TLS, IPSEC, SSH, HTTPS, etc.</p>
+    <p>Strong Cryptography: Cryptography based on industry-tested and accepted algorithms, along with strong key lengths (minimum 112-bits of effective key strength) and proper key-management practices. Cryptography is a method to protect data and includes both encryption (which is reversible) and hashing (which is not reversible, or \"one way\"). At the time of publication, examples of industry-tested and accepted standards and algorithms for minimum encryption strength include AES (128 bits and higher), TDES (minimum triple-lengthkeys), RSA (2048 bits and higher), ECC (160 bits and higher), and ElGamal (2048 bits and higher). See NIST Special Publication 800-57 Part 1 (http://csrc.nist.gov/publications/) for more guidance on cryptographic key strengths and algorithms.</p>
+    <p>POS: Acronym for "point of sale." Hardware and/or software used to process payment card transactions at merchant locations.</p>
+    <p>MO/TO: Acronym for "Mail-Order/Telephone-Order."</p>
+    <p>Merchant: For the purposes of the PCI DSS, a merchant is defined as any entity that accepts payment cards bearing the logos of any of the five members of PCI SSC (American Express, Discover, JCB, MasterCard or Visa) as payment for goods and/or services. Note that a merchant that accepts payment cards as payment for goods and/or services can also be a service provider, if the services sold result in storing, processing, or transmitting cardholder data on behalf of other merchants or service providers. For example, an ISP is a merchant that accepts payment cards for monthly billing, but also is a service provider if it hosts merchants as customers.</p>
+  </div>
+  <br>
+  <div class="contentWithGlossary">
+    <h3>Content With Glossary</h3>
+    <p>AAA:
+      Acronym for "authentication, authorization, and accounting." Protocol for authenticating a user based on their verifiable identity, authorizing a user based on their user rights, and accounting for a user's consumption of network resources.</p>
+    <p>SAQ: Acronym for "Self-Assessment Questionnaire." Reporting tool used to document self-assessment results from an entity's PCI DSS assessment.</p>
+    <p>Secure Cryptographic Device: A set of hardware, software and firmware that implements cryptographic processes (including cryptographic algorithms and key generation) and is contained within a defined cryptographic boundary. Examples of secure cryptographic devices include host/hardware security modules (HSMs) and point-of-interaction devices (POIs) that have been validated to PCI PTS.</p>
+    <p>Security Policy: Set of laws, rules, and practices that regulate how an organization manages, protects, and distributes sensitive information.</p>
+    <p>Security Protocols: Network communications protocols designed to secure the transmission of data. Examples of security protocols include, but are not limited to SSL/TLS, IPSEC, SSH, HTTPS, etc.</p>
+    <p>Strong Cryptography: Cryptography based on industry-tested and accepted algorithms, along with strong key lengths (minimum 112-bits of effective key strength) and proper key-management practices. Cryptography is a method to protect data and includes both encryption (which is reversible) and hashing (which is not reversible, or "one way"). At the time of publication, examples of industry-tested and accepted standards and algorithms for minimum encryption strength include AES (128 bits and higher), TDES (minimum triple-lengthkeys), RSA (2048 bits and higher), ECC (160 bits and higher), and ElGamal (2048 bits and higher). See NIST Special Publication 800-57 Part 1 (http://csrc.nist.gov/publications/) for more guidance on cryptographic key strengths and algorithms.</p>
+    <p>POS: Acronym for "point of sale." Hardware and/or software used to process payment card transactions at merchant locations.</p>
+    <p>MO/TO: Acronym for "Mail-Order/Telephone-Order."</p>
+    <p>Network Administrator: Personnel responsible for managing the network within an entity.  Responsibilities typically include but are not limited to network security, installations, upgrades, maintenance and activity monitoring.<p>
+    <p>Network Components: Include, but are not limited to firewalls, switches, routers, wireless access points, network appliances, and other security appliances.<p>
+    <p>Network: Two or more computers connected together  via physical or wireless means.<p>
+    <p>Virtual Machine Monitor: The VMM is included with the hypervisor and is software that implements virtual machine hardware abstraction. It manages the system's processor, memory, and other resources to allocate what each guest operating system requires.<p>
+    <p>Virtual Machine: A self-contained operating environment that behaves like a separate computer. It is also known as the "Guest" and runs on top of a hypervisor.<p>
+    <p>Merchant: For the purposes of the PCI DSS, a merchant is defined as any entity that accepts payment cards bearing the logos of any of the five members of PCI SSC (American Express, Discover, JCB, MasterCard or Visa) as payment for goods and/or services. Note that a merchant that accepts payment cards as payment for goods and/or services can also be a service provider, if the services sold result in storing, processing, or transmitting cardholder data on behalf of other merchants or service providers. For example, an ISP is a merchant that accepts payment cards for monthly billing, but also is a service provider if it hosts merchants as customers.</p>
+  </div>
+  <br>
+</div>
+  
+
+  <script src="jquery.min.js"></script>
+  <script src="tooltip/tooltip.js"></script>
+  <script src="jquery.glossarize.js"></script>
+  <script>
+  var jq = $.noConflict();
+  jq(document).ready(function(){
+
+    jq('.content').glossarizer({
+      sourceURL: 'glossary.json',
+      lookupTagName : '.contentWithGlossary',
+      //replaceOnce   : true,
+      callback: function(){
+        new tooltip();
+      }
+    });
+
+
+  });
+
+  </script>
+  
+</body>
+</html>
